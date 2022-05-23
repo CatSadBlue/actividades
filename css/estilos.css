@@ -32,8 +32,6 @@ nav{
     justify-content: flex-end;
 }
 header {
-    display: flex;
-    align-items: center;
 }
 .header_navegacion li a {
     text-decoration: none;
@@ -42,11 +40,14 @@ header {
     width: 200px;
 }
 
-
+.descripcion {
+    text-align: center;
+}
 
 .descripcion_titulo {
     font-weight: 700;
     color: #00d7b3ff; 
+    text-align: center;
 }
 body{
     color: #999999; 
@@ -67,6 +68,7 @@ h3{
         text-align: center;
         font-family: 'Barlow', sans-serif;
         grid-area: h3;
+        padding-top: 15px;
     }
 
 /* CLASE GRID */
@@ -89,13 +91,25 @@ h3{
     }
 }
 
-@media screen and (min-width: 400px)and (max-width: 1149px) {
+@media screen and (min-width: 631px)and (max-width: 1149px) {
     .grid_seccion {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
         "h3 h3"
         "promos_1 promos_2"
         "promos_3 promos_3";
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 400px)and (max-width: 630px) {
+    .grid_seccion {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "h3"
+        "promos_1"
+        "promos_2"
+        "promos_3";
         gap: 20px;
     }
 }
@@ -127,8 +141,7 @@ h3{
 .portada{
     display: flex;
     flex-direction: column;
-    background-image: url(../recursos/portada.jpg);
-    height: 300px;
+    height: 200px;
     justify-content: center;
     align-items: center;
     background-repeat: round;
@@ -162,7 +175,7 @@ h3{
     align-items:center;
     background-color:#ffddedff;  
     padding: 40px;
-    margin: 40px; 
+    margin: 0; 
     width: 200px;
     height: 300px;
     border-radius: 30px;
@@ -189,4 +202,8 @@ h3{
     text-align: justify;
     padding: 5px 0;
     height: 260px;
+}
+
+.no_padding {
+    padding: 5px 0;
 }
