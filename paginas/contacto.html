@@ -61,18 +61,50 @@
 
     <main>
         <!-- formulario -->
-        <h1>Contacto</h1>
+        <h1>Contáctanos</h1>
+       
         <section>
-            <h3>Contactanos</h3>
-            <form method="get">
-                <label for="nombre">Nombre:</label>	
-                <input type="text" name="nombre"></input>
-                <label for="correo">Correo:</label>	
-                <input type="text" name="correo"></input>
-                <label for="mensaje">Mensaje:</label>	
-                <input type="text" name="mensaje"></input>
-                <input type="submit" value="Enviar Formulario"></input>
-            </form>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 mx-auto">
+                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="name" name="name" class="form-control">
+                                    <label for="name" class="">Nombre</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="email" name="email" class="form-control">
+                                    <label for="email" class="">Correo</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="subject" name="subject" class="form-control">
+                                    <label for="name" class="">Asunto</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                    <label for="name" class="">Mensaje</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <div class="text-center text-md-left p-3">
+                        <a class="btn btn-primary" onclick="">Enviar</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="w-100 d-flex align-items justify-content-center flex-wrap">
