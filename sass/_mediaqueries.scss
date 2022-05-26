@@ -1,0 +1,44 @@
+@media screen and (min-width: 1150px) {
+    .grid_seccion {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "h3 h3 h3"
+        "promos_1 promos_2 promos_3";
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 631px)and (max-width: 1149px) {
+    .grid_seccion {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "h3 h3"
+        "promos_1 promos_2"
+        "promos_3 promos_3";
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 400px)and (max-width: 630px) {
+    .grid_seccion {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "h3"
+        "promos_1"
+        "promos_2"
+        "promos_3";
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .grid_seccion {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "h3"
+        "promos_1"
+        "promos_2"
+        "promos_3";
+        gap: 20px;
+    }
+}
