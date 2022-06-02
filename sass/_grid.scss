@@ -1,0 +1,27 @@
+.c-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    &__portada {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        background-repeat: round;
+        &__boton {
+            background-color:$color-principal; 
+            color: hsl(0, 0%, 100%); 
+        }
+    }
+    &__descripcion {
+        text-align: center;
+        &__titulo {
+            font-weight: 700;
+            color: #00d7b3ff; 
+            text-align: center;
+        }
+    }
+    &__seccion {
+        display: grid;
+    }
+}

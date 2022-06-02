@@ -1,5 +1,7 @@
 @import 'variables';
+@import 'header';
 @import 'footer';
+@import 'grid';
 @import 'mediaqueries';
 
 h1{
@@ -9,14 +11,7 @@ h1{
     font-family: 'Barlow', sans-serif;
     text-align: center;
     text-shadow: 3px 3px #ffddedff;
-    }
-
-
-.header_navegacion ul{
-    display: flex;
-    align-items: flex-end;
-    list-style-type: none;
-    }
+}
 
 li {
     padding: 10px;
@@ -35,24 +30,7 @@ nav{
     flex-wrap: wrap;
     justify-content: flex-end;
 }
-header {
-}
-.header_navegacion li a {
-    text-decoration: none;
-}
-.header_logo{
-    width: 200px;
-}
 
-.descripcion {
-    text-align: center;
-}
-
-.descripcion_titulo {
-    font-weight: 700;
-    color: #00d7b3ff; 
-    text-align: center;
-}
 body{
     color: #999999; 
     font-family: $letra-principal   
@@ -67,18 +45,6 @@ h3{
         padding-top: 15px;
     }
 
-/* CLASE GRID */
-.grid_main {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-}
-
-.grid_seccion {
-    display: grid;
-}
-
-
-
 .promos_1 {
     grid-area: promos_1;
 }
@@ -91,30 +57,9 @@ h3{
     grid-area: promos_3;
 }
 
-.portada{
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    background-repeat: round;
-}
-
-.portada_boton{
-    background-color:$color-principal; 
-    color: hsl(0, 0%, 100%); 
-}
 .botoncomun{
     background-color:#6e4cc2ff; 
     color: hsl(0, 0%, 100%); 
-}
-
-
-
-.promociones{
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*flex-wrap: wrap;*/
 }
 
 .promos_imagen{
@@ -122,6 +67,7 @@ h3{
     border-radius: 10px;
 
 }
+
 .promos_tarjetas{
     display: flex;
     flex-direction:column;
@@ -133,15 +79,6 @@ h3{
     height: 300px;
     border-radius: 30px;
 }
-
-
-/*.populares {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-*/
-
 
 .categorias{
     display: flex;

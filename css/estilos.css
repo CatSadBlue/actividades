@@ -1,32 +1,64 @@
-footer {
+.c-header {
+  display: block; }
+  .c-header__navegacion {
+    display: flex;
+    align-items: flex-end;
+    list-style-type: none; }
+    .c-header__navegacion__item {
+      text-decoration: none; }
+  .c-header__logo {
+    width: 200px; }
+
+.c-footer {
   color: white;
   font-weight: 500;
   background-color: #ff72c7;
   text-align: center; }
+  .c-footer__mensaje {
+    padding: 0 10px; }
 
-footer p {
-  padding: 0 10px; }
+.c-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); }
+  .c-grid__portada {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background-repeat: round; }
+    .c-grid__portada__boton {
+      background-color: #ff72c7;
+      color: white; }
+  .c-grid__descripcion {
+    text-align: center; }
+    .c-grid__descripcion__titulo {
+      font-weight: 700;
+      color: #00d7b3ff;
+      text-align: center; }
+  .c-grid__seccion {
+    display: grid; }
 
 @media screen and (min-width: 1150px) {
-  .grid_seccion {
+  .c-grid__seccion {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "h3 h3 h3" "promos_1 promos_2 promos_3";
     gap: 20px; } }
 
 @media screen and (min-width: 631px) and (max-width: 1149px) {
-  .grid_seccion {
+  .c-grid__seccion {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "h3 h3" "promos_1 promos_2" "promos_3 promos_3";
     gap: 20px; } }
 
 @media screen and (min-width: 400px) and (max-width: 630px) {
-  .grid_seccion {
+  .c-grid__seccion {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "h3" "promos_1" "promos_2" "promos_3";
     gap: 20px; } }
 
 @media screen and (max-width: 399px) {
-  .grid_seccion {
+  .c-grid__seccion {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "h3" "promos_1" "promos_2" "promos_3";
     gap: 20px; } }
@@ -38,11 +70,6 @@ h1 {
   font-family: 'Barlow', sans-serif;
   text-align: center;
   text-shadow: 3px 3px #ffddedff; }
-
-.header_navegacion ul {
-  display: flex;
-  align-items: flex-end;
-  list-style-type: none; }
 
 li {
   padding: 10px; }
@@ -61,20 +88,6 @@ nav {
   flex-wrap: wrap;
   justify-content: flex-end; }
 
-.header_navegacion li a {
-  text-decoration: none; }
-
-.header_logo {
-  width: 200px; }
-
-.descripcion {
-  text-align: center; }
-
-.descripcion_titulo {
-  font-weight: 700;
-  color: #00d7b3ff;
-  text-align: center; }
-
 body {
   color: #999999;
   font-family: "Questrial", sans-serif; }
@@ -87,14 +100,6 @@ h3 {
   grid-area: h3;
   padding-top: 15px; }
 
-/* CLASE GRID */
-.grid_main {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr); }
-
-.grid_seccion {
-  display: grid; }
-
 .promos_1 {
   grid-area: promos_1; }
 
@@ -104,26 +109,9 @@ h3 {
 .promos_3 {
   grid-area: promos_3; }
 
-.portada {
-  display: flex;
-  flex-direction: column;
-  height: 200px;
-  justify-content: center;
-  align-items: center;
-  background-repeat: round; }
-
-.portada_boton {
-  background-color: #ff72c7;
-  color: white; }
-
 .botoncomun {
   background-color: #6e4cc2ff;
   color: white; }
-
-.promociones {
-  /*display: flex;*/
-  /*flex-direction: row;*/
-  /*flex-wrap: wrap;*/ }
 
 .promos_imagen {
   width: 200px;
@@ -140,12 +128,6 @@ h3 {
   height: 300px;
   border-radius: 30px; }
 
-/*.populares {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-*/
 .categorias {
   display: flex; }
 

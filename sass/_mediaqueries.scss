@@ -1,5 +1,5 @@
 @media screen and (min-width: 1150px) {
-    .grid_seccion {
+    .c-grid__seccion {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: 
         "h3 h3 h3"
@@ -9,7 +9,7 @@
 }
 
 @media screen and (min-width: 631px)and (max-width: 1149px) {
-    .grid_seccion {
+    .c-grid__seccion {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
         "h3 h3"
@@ -20,7 +20,7 @@
 }
 
 @media screen and (min-width: 400px)and (max-width: 630px) {
-    .grid_seccion {
+    .c-grid__seccion {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
         "h3"
@@ -32,7 +32,7 @@
 }
 
 @media screen and (max-width: 399px) {
-    .grid_seccion {
+    .c-grid__seccion {
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas: 
         "h3"
