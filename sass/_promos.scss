@@ -1,31 +1,18 @@
-.c-promos {
-    &__tarjetas {
-        display: flex;
-        flex-direction:column;
-        align-items:center;
-        background-color:#ffddedff;  
-        padding: 40px;
-        margin: auto; 
+// MAP
+$platos: (
+    plato1: menu_1,
+    plato2: menu_2,
+    plato3: menu_3,
+    plato4: menu_4,
+    plato5: menu_7,
+    plato6: menu_6
+);
+@each $key, $plato in $platos {
+    .#{$key}-imagen {
+        background-image: url('../recursos/#{$plato}.png');
         width: 200px;
-        height: 300px;
-        border-radius: 30px;
-        &__imagen {
-            width: 200px;
-            border-radius: 10px;
-        }
-        &__parrafo {
-            text-align: justify;
-            padding: 5px 0;
-            height: 260px;
-        }
-    }
-    &__1 {
-        grid-area: promos_1;
-    }
-    &__2 {
-        grid-area: promos_2;
-    }
-    &__3 {
-        grid-area: promos_3;
+        height: 112.5px;
+        border-radius: 10px;
+        background-size: cover;
     }
 }

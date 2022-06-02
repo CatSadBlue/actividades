@@ -1,44 +1,117 @@
+//MIXIN
+
+@mixin mixGrid ($gap, $repeat, $fr) {
+    grid-template-columns: repeat($repeat, $fr);
+    gap: $gap;
+}
+
 @media screen and (min-width: 1150px) {
-    .c-grid__seccion {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
-        "h3 h3 h3"
-        "promos_1 promos_2 promos_3";
-        gap: 20px;
+    .c-grid {
+        &__seccion {
+            grid-template-areas: 
+            "h3 h3 h3"
+            "promos_1 promos_2 promos_3";
+            @include mixGrid(20px, 3, 1fr);
+        }
+        &__menu {
+            grid-template-areas: 
+            "h3 h3 h3"
+            "h4 h4 h4"
+            "promos_1 promos_2 promos_3";
+            @include mixGrid(20px, 3, 1fr);
+        }
+        &__submenu {
+            grid-template-areas: 
+            "h4 h4 h4"
+            "promos_1 promos_2 promos_3";
+            @include mixGrid(20px, 3, 1fr);
+        }
     }
 }
 
 @media screen and (min-width: 631px)and (max-width: 1149px) {
-    .c-grid__seccion {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 
-        "h3 h3"
-        "promos_1 promos_2"
-        "promos_3 promos_3";
-        gap: 20px;
+    .c-grid {
+        &__seccion {
+            grid-template-areas: 
+            "h3 h3"
+            "promos_1 promos_2"
+            "promos_3 promos_3";
+            @include mixGrid(20px, 2, 1fr);
+        }
+        &__menu {
+            grid-template-areas: 
+            "h3 h3"
+            "h4 h4"
+            "promos_1 promos_2"
+            "promos_3 promos_3";
+            @include mixGrid(20px, 2, 1fr);
+        }
+        &__submenu {
+            grid-template-areas: 
+            "h4 h4"
+            "promos_1 promos_2"
+            "promos_3 promos_3";
+            @include mixGrid(20px, 2, 1fr);
+        }
     }
 }
 
 @media screen and (min-width: 400px)and (max-width: 630px) {
-    .c-grid__seccion {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 
-        "h3"
-        "promos_1"
-        "promos_2"
-        "promos_3";
-        gap: 20px;
+    .c-grid {
+        &__seccion {
+            grid-template-areas: 
+            "h3"
+            "promos_1"
+            "promos_2"
+            "promos_3";
+            @include mixGrid(20px, 1, 1fr);
+        }
+        &__menu {
+            grid-template-areas: 
+            "h3"
+            "h4"
+            "promos_1"
+            "promos_2"
+            "promos_3";
+            @include mixGrid(20px, 1, 1fr);
+        }
+        &__submenu {
+            grid-template-areas: 
+            "h4"
+            "promos_1"
+            "promos_2"
+            "promos_3";
+            @include mixGrid(20px, 1, 1fr);
+        }
     }
 }
 
 @media screen and (max-width: 399px) {
-    .c-grid__seccion {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-areas: 
-        "h3"
-        "promos_1"
-        "promos_2"
-        "promos_3";
-        gap: 20px;
+    .c-grid {
+        &__seccion {
+            grid-template-areas: 
+            "h3"
+            "promos_1"
+            "promos_2"
+            "promos_3";
+            @include mixGrid(20px, 1, 1fr);
+        }
+        &__menu {
+            grid-template-areas: 
+            "h3"
+            "h4"
+            "promos_1"
+            "promos_2"
+            "promos_3";
+            @include mixGrid(20px, 1, 1fr);
+        }
+        &__submenu {
+            grid-template-areas: 
+            "h4"
+            "promos_1"
+            "promos_2"
+            "promos_3";
+            @include mixGrid(20px, 1, 1fr);
+        }
     }
 }

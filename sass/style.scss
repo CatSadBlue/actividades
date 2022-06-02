@@ -2,10 +2,11 @@
 @import 'header';
 @import 'footer';
 @import 'grid';
+@import 'promos';
 @import 'mediaqueries';
 
-h1{
-    color: #6e4cc2ff; 
+h1 {
+    color:$color-titulos; 
     font-size: 70px;   
     font-style: italic;
     font-family: 'Barlow', sans-serif;
@@ -16,59 +17,73 @@ h1{
 li {
     padding: 10px;
 }
-a  {
+
+a {
     text-decoration: none;
     color: $color-principal;
 }
+
 #iconos i {
     color: white;
     padding: 0 10px;
 }
-nav{
+
+nav {
     order: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
 
-body{
+body {
     color: #999999; 
     font-family: $letra-principal   
+}
+
+h3 {
+    color: $color-principal; 
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    grid-area: h3;
+    padding-top: 15px;
+}
+
+h4 {
+    grid-area: h4;
+}
+
+// MAP
+$promos: (
+    key1 : 1,
+    key2 : 2,
+    key3 : 3
+);
+@each $key, $promo in $promos {
+    .promo_#{$key} {
+        grid-area: promos_#{$promo};
     }
-
-h3{
-        color: $color-principal; 
-        font-weight: 500;
-        text-align: center;
-        font-family: 'Barlow', sans-serif;
-        grid-area: h3;
-        padding-top: 15px;
-    }
-
-.promos_1 {
-    grid-area: promos_1;
 }
 
-.promos_2 {
-    grid-area: promos_2;
-}
-
-.promos_3 {
-    grid-area: promos_3;
-}
-
-.botoncomun{
-    background-color:#6e4cc2ff; 
+.botoncomun {
+    background-color:$color-titulos; 
     color: hsl(0, 0%, 100%); 
+    padding: 0 10px;
 }
 
-.promos_imagen{
+// EXTEND
+.botondestacado {
+    border-radius: 10px;
+    font-weight: bold;
+    @extend .botoncomun
+}
+
+.promos_imagen {
     width: 200px;
     border-radius: 10px;
-
 }
 
-.promos_tarjetas{
+.promos_tarjetas {
     display: flex;
     flex-direction:column;
     align-items:center;
@@ -80,7 +95,7 @@ h3{
     border-radius: 30px;
 }
 
-.categorias{
+.categorias {
     display: flex;
 }
 
@@ -91,7 +106,7 @@ h3{
 .promos_parrafo {
     text-align: justify;
     padding: 5px 0;
-    height: 260px;
+    height: 150px;
 }
 
 .no_padding {

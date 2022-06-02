@@ -38,29 +38,107 @@
       text-align: center; }
   .c-grid__seccion {
     display: grid; }
+  .c-grid__menu {
+    display: grid; }
+  .c-grid__submenu {
+    display: grid; }
+
+.plato1-imagen {
+  background-image: url("../recursos/menu_1.png");
+  width: 200px;
+  height: 112.5px;
+  border-radius: 10px;
+  background-size: cover; }
+
+.plato2-imagen {
+  background-image: url("../recursos/menu_2.png");
+  width: 200px;
+  height: 112.5px;
+  border-radius: 10px;
+  background-size: cover; }
+
+.plato3-imagen {
+  background-image: url("../recursos/menu_3.png");
+  width: 200px;
+  height: 112.5px;
+  border-radius: 10px;
+  background-size: cover; }
+
+.plato4-imagen {
+  background-image: url("../recursos/menu_4.png");
+  width: 200px;
+  height: 112.5px;
+  border-radius: 10px;
+  background-size: cover; }
+
+.plato5-imagen {
+  background-image: url("../recursos/menu_7.png");
+  width: 200px;
+  height: 112.5px;
+  border-radius: 10px;
+  background-size: cover; }
+
+.plato6-imagen {
+  background-image: url("../recursos/menu_6.png");
+  width: 200px;
+  height: 112.5px;
+  border-radius: 10px;
+  background-size: cover; }
 
 @media screen and (min-width: 1150px) {
   .c-grid__seccion {
-    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "h3 h3 h3" "promos_1 promos_2 promos_3";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; }
+  .c-grid__menu {
+    grid-template-areas: "h3 h3 h3" "h4 h4 h4" "promos_1 promos_2 promos_3";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; }
+  .c-grid__submenu {
+    grid-template-areas: "h4 h4 h4" "promos_1 promos_2 promos_3";
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px; } }
 
 @media screen and (min-width: 631px) and (max-width: 1149px) {
   .c-grid__seccion {
-    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "h3 h3" "promos_1 promos_2" "promos_3 promos_3";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; }
+  .c-grid__menu {
+    grid-template-areas: "h3 h3" "h4 h4" "promos_1 promos_2" "promos_3 promos_3";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; }
+  .c-grid__submenu {
+    grid-template-areas: "h4 h4" "promos_1 promos_2" "promos_3 promos_3";
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px; } }
 
 @media screen and (min-width: 400px) and (max-width: 630px) {
   .c-grid__seccion {
-    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "h3" "promos_1" "promos_2" "promos_3";
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px; }
+  .c-grid__menu {
+    grid-template-areas: "h3" "h4" "promos_1" "promos_2" "promos_3";
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px; }
+  .c-grid__submenu {
+    grid-template-areas: "h4" "promos_1" "promos_2" "promos_3";
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px; } }
 
 @media screen and (max-width: 399px) {
   .c-grid__seccion {
-    grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "h3" "promos_1" "promos_2" "promos_3";
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px; }
+  .c-grid__menu {
+    grid-template-areas: "h3" "h4" "promos_1" "promos_2" "promos_3";
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px; }
+  .c-grid__submenu {
+    grid-template-areas: "h4" "promos_1" "promos_2" "promos_3";
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px; } }
 
 h1 {
@@ -100,18 +178,26 @@ h3 {
   grid-area: h3;
   padding-top: 15px; }
 
-.promos_1 {
+h4 {
+  grid-area: h4; }
+
+.promo_key1 {
   grid-area: promos_1; }
 
-.promos_2 {
+.promo_key2 {
   grid-area: promos_2; }
 
-.promos_3 {
+.promo_key3 {
   grid-area: promos_3; }
 
-.botoncomun {
+.botoncomun, .botondestacado {
   background-color: #6e4cc2ff;
-  color: white; }
+  color: white;
+  padding: 0 10px; }
+
+.botondestacado {
+  border-radius: 10px;
+  font-weight: bold; }
 
 .promos_imagen {
   width: 200px;
@@ -137,7 +223,7 @@ h3 {
 .promos_parrafo {
   text-align: justify;
   padding: 5px 0;
-  height: 260px; }
+  height: 150px; }
 
 .no_padding {
   padding: 5px 0; }
