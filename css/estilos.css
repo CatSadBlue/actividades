@@ -215,7 +215,8 @@ h4 {
   border-radius: 30px; }
 
 .categorias {
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
 
 *, ::after, ::before {
   box-sizing: inherit; }
@@ -227,3 +228,15 @@ h4 {
 
 .no_padding {
   padding: 5px 0; }
+
+.ubicacion {
+  text-align: center; }
+
+h5 {
+  color: #ff72c7;
+  font-family: 'Barlow', sans-serif; }
+
+.galeria {
+  box-sizing: border-box; }
+  .galeria__item:hover {
+    padding-left: 5px; }

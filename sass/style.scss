@@ -97,6 +97,7 @@ $promos: (
 
 .categorias {
     display: flex;
+    flex-direction: column;
 }
 
 *, ::after, ::before {
@@ -111,4 +112,21 @@ $promos: (
 
 .no_padding {
     padding: 5px 0;
+}
+
+.ubicacion {
+    text-align: center;
+}
+
+h5 {
+    color: $color-principal;
+    font-family: 'Barlow', sans-serif;
+
+}
+
+.galeria {
+    box-sizing: border-box;
+    &__item:hover {
+        padding-left: 5px;
+    }
 }
