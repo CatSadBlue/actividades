@@ -3,6 +3,7 @@
 @import 'footer';
 @import 'grid';
 @import 'promos';
+@import 'ubicacion';
 @import 'mediaqueries';
 
 h1 {
@@ -37,7 +38,14 @@ nav {
 
 body {
     color: #999999; 
-    font-family: $letra-principal   
+    font-family: $letra-principal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin-bottom: 15px;
 }
 
 h3 {
@@ -51,6 +59,7 @@ h3 {
 
 h4 {
     grid-area: h4;
+    margin: auto;
 }
 
 // MAP
@@ -108,14 +117,11 @@ $promos: (
     text-align: justify;
     padding: 5px 0;
     height: 150px;
+    color: #000;
 }
 
 .no_padding {
     padding: 5px 0;
-}
-
-.ubicacion {
-    text-align: center;
 }
 
 h5 {

@@ -13,7 +13,8 @@
   color: white;
   font-weight: 500;
   background-color: #ff72c7;
-  text-align: center; }
+  text-align: center;
+  margin-top: auto; }
   .c-footer__mensaje {
     padding: 0 10px; }
 
@@ -37,11 +38,14 @@
       color: #00d7b3ff;
       text-align: center; }
   .c-grid__seccion {
-    display: grid; }
+    display: grid;
+    margin-bottom: 20px; }
   .c-grid__menu {
-    display: grid; }
+    display: grid;
+    margin-bottom: 20px; }
   .c-grid__submenu {
-    display: grid; }
+    display: grid;
+    margin-bottom: 20px; }
 
 .plato1-imagen {
   background-image: url("../recursos/menu_1.png");
@@ -85,6 +89,13 @@
   border-radius: 10px;
   background-size: cover; }
 
+.c-ubicacion {
+  text-align: center; }
+  .c-ubicacion__linea1 {
+    margin-bottom: 0; }
+  .c-ubicacion__linea2 {
+    margin-bottom: 20px; }
+
 @media screen and (min-width: 1150px) {
   .c-grid__seccion {
     grid-template-areas: "h3 h3 h3" "promos_1 promos_2 promos_3";
@@ -127,6 +138,10 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 20px; } }
 
+@media screen and (max-width: 449px) {
+  h1 {
+    font-size: 55px !important; } }
+
 @media screen and (max-width: 399px) {
   .c-grid__seccion {
     grid-template-areas: "h3" "promos_1" "promos_2" "promos_3";
@@ -168,7 +183,13 @@ nav {
 
 body {
   color: #999999;
-  font-family: "Questrial", sans-serif; }
+  font-family: "Questrial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+main {
+  margin-bottom: 15px; }
 
 h3 {
   color: #ff72c7;
@@ -179,7 +200,8 @@ h3 {
   padding-top: 15px; }
 
 h4 {
-  grid-area: h4; }
+  grid-area: h4;
+  margin: auto; }
 
 .promo_key1 {
   grid-area: promos_1; }
@@ -224,13 +246,11 @@ h4 {
 .promos_parrafo {
   text-align: justify;
   padding: 5px 0;
-  height: 150px; }
+  height: 150px;
+  color: #000; }
 
 .no_padding {
   padding: 5px 0; }
-
-.ubicacion {
-  text-align: center; }
 
 h5 {
   color: #ff72c7;
